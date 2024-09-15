@@ -1,0 +1,37 @@
+.mega-electronic {
+    font-size: 20px;
+    color: #2F3059;
+    font-weight: 500;
+    font-style: Medium;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.edit-task {
+    color: rgba(104, 113, 150, 1);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.line{
+    border: 1px solid rgba(230, 235, 240, 1);
+}
+
+.buttons {
+    width: fit-content;
+    font-size: 13px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    background-color: #F1F3F8;
+    color: rgba(104, 113, 150, 1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buttons:hover, 
+.buttons.active {
+    background-color: rgba(62, 64, 219, 0.1); 
+    color: blue;
+}

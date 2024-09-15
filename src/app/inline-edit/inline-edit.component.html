@@ -1,0 +1,32 @@
+<div class="row mt-4 mb-4">
+    <div>
+        <button class="button col-sm-6 py-2 d-flex flex-start align-items-center"><img src="\assets\icon\icon-logicpilot.svg.svg" class="me-1">
+            Ask Logic Pilot to generate subtasks or to summarize comments</button>
+    </div>
+</div>
+
+<div class="inline">
+    <div class="row mb-2">
+        <div class="col-sm-2">
+            <div class="d-flex align-items-center">
+                <img src="\assets\icon\icon-status.svg" class="me-1">Status
+            </div>
+        </div>
+        <div class="col-sm-2"><button class="unpaid me-2">Unpaid</button></div>
+    </div>
+    <div class="row mb-2" *ngFor="let field of fields">
+        <div class="col-sm-2">
+            <div class="d-flex align-items-center">
+                <img [src]="field.icon" class="me-1">{{ field.label }}
+            </div>
+        </div>
+        <div class="col-sm-4 text-start editable" (click)="startEdit(field)">
+            <ng-container *ngIf="!field.isEditing">
+                <button class="editable">{{ field.value }}</button>
+            </ng-container>
+            <ng-container *ngIf="field.isEditing">
+                <input [(ngModel)]="field.value" (blur)="stopEdit(field)" (keyup)="stopEdit(field)" class="input-field" [attr.placeholder]="field.placeholder"/>
+            </ng-container>
+        </div>
+    </div>
+</div> 

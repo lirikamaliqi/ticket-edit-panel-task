@@ -1,0 +1,45 @@
+button {
+    font-size: 13px;
+    border-radius: 5px;
+    border: none;
+    background-color:#FFF0FD;
+    color: rgba(104, 113, 150, 1);
+    font-size: 14px;
+}
+
+.inline {
+    font-size: 14px;
+    color: rgba(104, 113, 150, 1);
+    cursor: pointer;
+}
+
+.unpaid {
+    background-color: #FCEEB5;
+    color: #B13600;
+    font-weight: 500;
+}
+
+.editable {
+    background-color: transparent;
+    padding: 0;
+}
+
+.editable:hover {
+    background-color: #F1F3F8;
+    border-radius: 5px;
+}
+
+.input-field {
+    width: 100%;
+    font-size: 13px;
+    border-radius: 5px;
+    border: 0.1em solid #3E40DB;
+    background-color: #FFFF;
+    color: black;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+  
+

@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="mega-electronic mt-3"><strong>Mega Electronix</strong></div>
+    <div class="edit-task mt-1"><p>Edit task</p></div>
+    <div class="line mb-3"></div>
+    <button *ngFor="let button of buttons; let i = index" [ngClass]="{'active': isActive(i)}" class="buttons me-3 p-1" (click)="selectButton(i)">
+        <div class="d-flex align-items-center">
+            <img [src]="button.icon" class="me-1">{{ button.label }}
+        </div>
+    </button>
+    <div class="line mt-3"></div>
+    <app-inline-edit *ngIf="isFirstButtonActive()"></app-inline-edit>
+    <app-subtask-list *ngIf="isFirstButtonActive()"></app-subtask-list>
+</div>

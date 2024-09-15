@@ -1,0 +1,34 @@
+<div class="d-flex align-items-center text-center mt-5">
+    <div class="title me-3">
+        <strong>Subtasks</strong>
+    </div>
+    <div class="progress me-2">
+        <div class="progress-bar" style="width: 25%;"></div>
+  </div>
+  <span>1/4</span>
+</div>
+<div class="line mt-3 mb-4"></div>
+<table class="table table-custom-borders table-hover">
+    <thead>
+      <tr>
+        <td>Subtask name</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks; let i = index">
+        <td class="row-border">
+          <div class="d-flex flex-row" (click)="toggleCheckmark(i)">
+            <div class="circle me-2 text-center">
+              <img *ngIf="isVisible[i]" src="assets/icon/icon-checkmark.svg" class="mb-1">
+            </div>
+            <div>
+              {{ task }}
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr class="add-subtask"> 
+        <td class="p-3">+ Add subtask</td>
+      </tr>
+    </tbody>
+  </table>
